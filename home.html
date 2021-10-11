@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/animate.css">
+    <script src="js/mobile-detect.js"></script>
+    <script>
+      let detect = new MobileDetect(window.navigator.userAgent);
+      if(detect.phone()){
+        document.getElementsByTagName("head")[0].insertAdjacentHTML(
+        "beforeend",
+        "<link rel=\"stylesheet\" href=\"style/mobile.css\" />");
+      }
+      else{
+        document.getElementsByTagName("head")[0].insertAdjacentHTML(
+        "beforeend",
+        "<link rel=\"stylesheet\" href=\"style/main.css\" />");
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="img/menuIcon.svg" onclick="menuClick()">
+        <ul id="navMenu">
+          <li><a href="work.html">Works</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="welcome">
+        <div class="welcomeRow">
+          <div class="welcomeColumn">
+            <h1 class="animate__animated animate__slideInLeft">Hi, I am John, Creative Technologist</h1>
+            <p class="animate__animated animate__slideInLeft">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+              sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
+              consequat sunt nostrud amet.</p>
+            <a class="welcomeImg animate__animated animate__fadeInUp neon-button">Download Resume</a>
+          </div>
+          <div class="welcomeColumn">
+            <div class="welcomImgContainer">
+              <img src="img/avatar.png" alt="avatar" class="welcomeImg myAnimate">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+    <main>
+
+      <section>
+        <div class="cardsRow">
+          <div class="cardsColumn">
+            <p class="cardsRecentPosts">Recent posts</p>
+            <div class="cardsColumnContent wow animate__animated animate__fadeInUp">
+              <h1>Making a design system from scratch</h1>
+              <div class="cardsInfoRow">
+                <span class="firstSpan">12 Feb 2020</span>
+                <span class="secondSpan">Design, Pattern</span>
+              </div>
+              <p>Amet minim mollit non deserunt ullamco est sit
+                aliqua dolor do amet sint. Velit officia consequat
+                duis enim velit mollit. Exercitation veniam
+                consequat sunt nostrud amet.</p>
+            </div>
+          </div>
+          <div class="cardsColumn">
+            <p class="cardsViewAll">View all</p>
+            <div class="cardsColumnContent wow animate__animated animate__fadeInUp">
+              <h1>Creating pixel perfect icons in Figma</h1>
+              <div class="cardsInfoRow">
+                <span class="firstSpan">12 Feb 2020</span>
+                <span class="secondSpan">Design, Pattern</span>
+              </div>
+              <p>Amet minim mollit non deserunt ullamco est sit
+                aliqua dolor do amet sint. Velit officia consequat
+                duis enim velit mollit. Exercitation veniam
+                consequat sunt nostrud amet.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="cardFeaturedWorksContainer">
+        <p class="headingFeaturedWorks">Featured works</p>
+        <div class="cardFeaturedWorks wow animate__animated animate__fadeInUp">
+          <div class="cardFeaturedWorksColumn wow animate__animated animate__slideInLeft">
+            <img src="img/image4.png">
+          </div>
+          <div class="cardFeaturedWorksColumn">
+            <h1 class="wow animate__animated animate__slideInRight"><a href="workDetail.html">Designing Dashboards</a></h1>
+            <div class="cardSpan wow animate__animated animate__slideInRight">
+              <span class="cardYear">2020</span>
+              <span class="cardSpanDesc">Dashboard</span>
+            </div>
+            <p class="wow animate__animated animate__slideInRight">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+              officia consequat duis enim velit mollit. Exercitation veniam consequat sunt 
+              nostrud amet.</p>
+          </div>
+        </div>
+
+        <div class="cardFeaturedWorks wow animate__animated animate__fadeInUp">
+          <div class="cardFeaturedWorksColumn wow animate__animated animate__slideInLeft">
+            <img src="img/image5.png">
+          </div>
+          <div class="cardFeaturedWorksColumn">
+            <h1 class="wow animate__animated animate__slideInRight"><a href="workDetail.html">Vibrant Portraits of 2020</a></h1>
+            <div class="cardSpan wow animate__animated animate__slideInRight">
+              <span class="cardYear">2018</span>
+              <span class="cardSpanDesc">Illustration</span>
+            </div>
+            <p class="wow animate__animated animate__slideInRight">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+              officia consequat duis enim velit mollit. Exercitation veniam consequat sunt 
+              nostrud amet.</p>
+          </div>
+        </div>
+
+        <div class="cardFeaturedWorks wow animate__animated animate__fadeInUp">
+          <div class="cardFeaturedWorksColumn wow animate__animated animate__slideInLeft">
+            <img src="img/image6.png">
+          </div>
+          <div class="cardFeaturedWorksColumn">
+            <h1 class="wow animate__animated animate__slideInRight"><a href="workDetail.html">36 Days of Malayalam type</a></h1>
+            <div class="cardSpan wow animate__animated animate__slideInRight">
+              <span class="cardYear">2018</span>
+              <span class="cardSpanDesc">Typography</span>
+            </div>
+            <p class="wow animate__animated animate__slideInRight">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+              officia consequat duis enim velit mollit. Exercitation veniam consequat sunt 
+              nostrud amet.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="wow animate__animated animate__fadeInUp">
+      <div class="footerIconsContainer">
+        <img class="footerIcons" src="img/facebook.svg">
+        <img class="footerIcons" src="img/instagram.svg">
+        <img class="footerIcons" src="img/twitter.svg">
+        <img class="footerIcons" src="img/Linkedin.svg">
+      </div>
+      <p>Copyright ©2020 All rights reserved</p>
+    </footer>
+
+    <script>
+      function menuClick(){
+        var menu = document.getElementById("navMenu");
+        if(menu.style.visibility== "visible"){
+          menu.style.visibility = "hidden";
+          menu.style.opacity = 0;
+          menu.style.height = "0px";
+        }else{
+          menu.style.visibility = "visible";
+          menu.style.opacity = 1;
+          menu.style.height = "30px";
+        }
+      }
+    </script>
+    <script src="js/wow.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+
+  </body>
+</html>

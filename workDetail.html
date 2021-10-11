@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Work detail</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/animate.css">
+    <script src="js/mobile-detect.js"></script>
+    <script>
+      let detect = new MobileDetect(window.navigator.userAgent);
+      if(detect.phone()){
+        document.getElementsByTagName("head")[0].insertAdjacentHTML(
+        "beforeend",
+        "<link rel=\"stylesheet\" href=\"style/mobile.css\" />");
+      }
+      else{
+        document.getElementsByTagName("head")[0].insertAdjacentHTML(
+        "beforeend",
+        "<link rel=\"stylesheet\" href=\"style/main.css\" />");
+      }
+    </script>
+  </head>
+  <body>
+    <header class="headerSecond">
+      <nav>
+        <img src="img/menuIcon.svg" onclick="menuClick()">
+        <ul id="navMenu">
+          <li><a href="work.html">Works</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="workContainer">
+        <div class="workDetailContainer">
+          <h1 class="wow animate__animated animate__slideInUp">Designing Dashboards with usability in mind</h1>
+          <div class="workDescriptionContainer wow animate__animated animate__slideInUp">
+            <span class="spanFirst">2020</span>
+            <span class="spanSecond">Dashboard, User Experience Design</span>
+          </div>
+          <p class="wow animate__animated animate__slideInUp">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+            officia consequat duis enim velit mollit. Exercitation veniam consequat sunt 
+            nostrud amet.
+          </p>
+          <img src="img/image1.png" alt="img1" class="wow animate__animated animate__slideInUp">
+          <h2 class="wow animate__animated animate__slideInUp">Heading 1</h2>
+          <h3 class="wow animate__animated animate__slideInUp">heading 2</h3>
+          <p class="wow animate__animated animate__slideInUp">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+            officia consequat duis enim velit mollit. Exercitation veniam consequat sunt 
+            nostrud amet.
+          </p>
+          <img src="img/image2.png" alt="img2" class="wow animate__animated animate__slideInUp">
+          <img src="img/image3.png" alt="img3" class="wow animate__animated animate__slideInUp">
+        </div>
+      </div>
+      
+
+    </main>
+
+    <footer class="wow animate__animated animate__fadeInUp">
+      <div class="footerIconsContainer">
+        <img class="footerIcons" src="img/facebook.svg">
+        <img class="footerIcons" src="img/instagram.svg">
+        <img class="footerIcons" src="img/twitter.svg">
+        <img class="footerIcons" src="img/Linkedin.svg">
+      </div>
+      <p>Copyright ©2020 All rights reserved</p>
+    </footer>
+    <script>
+      function menuClick(){
+        var menu = document.getElementById("navMenu");
+        if(menu.style.visibility== "visible"){
+          menu.style.visibility = "hidden";
+          menu.style.opacity = 0;
+          menu.style.height = "0px";
+        }else{
+          menu.style.visibility = "visible";
+          menu.style.opacity = 1;
+          menu.style.height = "30px";
+        }
+      }
+    </script>
+    <script src="js/wow.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </body>
+</html>
